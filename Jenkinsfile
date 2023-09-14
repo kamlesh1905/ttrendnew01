@@ -18,7 +18,7 @@ pipeline {
 		
 	   stage('SonarQube analysis') {
          environment {
-          scannerHome = tool 'SonarScannner'
+          scannerHome = tool 'SonarScanner'
          }
          steps{
           withSonarQubeEnv('SonarQube-Server') { // If you have configured more than one global server connection, you can specify its name
