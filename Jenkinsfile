@@ -14,7 +14,7 @@ pipeline {
                 sh 'mvn clean deploy'
                echo "----------- build complted ----------"
             }
-        }
+        } 
 		
 		stage("test"){
             steps{
@@ -43,8 +43,8 @@ pipeline {
         if (qg.status != 'OK') {
         error "Pipeline aborted due to quality gate failure: ${qg.status}"
 			}
-		  }
-	   }
+		}
+	  }
     }
    }	
   }   
